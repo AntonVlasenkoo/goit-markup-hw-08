@@ -1,0 +1,31 @@
+//  @import '';
+ // utils styles
+
+
+@import './utils/variables';
+ // base styles
+
+
+ @import './base/_base';
+ @import './base/_reset';
+
+ // components styles
+ @import './components/container';
+ @import './components/section';
+ @import './components/buttons';
+ @import './components/header';
+ @import './components/logo';
+ @import './components/navigation';
+ @import './components/hero';
+ @import './components/modal';
+ @import './components/backdrop';
+ @import './components/form';
+ @import './components/world';
+ @import './components/features.scss';
+ @import './components/team';
+ @import './components/customers';
+ @import './components/gallery';
+ @import './components/footer';
+ @import './components/social';
+ @import './components/subscribe';
+ 
