@@ -1,8 +1,14 @@
 .features {
-    padding-bottom: 0;
+
+@extend %section !optional
 }
 
+
 .features__title {
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+        text-align: left;
+    }
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
@@ -32,10 +38,15 @@
 
 .features__container-icon {
     display: flex;
+    @media screen and (min-width:$desktop) {
+        height: 120px;
+        width: 270px;
+    }
+    
     justify-content: center;
     align-items: center;
     height: 120px;
-    width: 270px;
+    width: 100%;
     background: #F5F4FA;
     border-radius: 4px;
     margin-bottom: 30px;
@@ -45,21 +56,49 @@
 
 
 .features__list {
-    display: flex;
+    display: block;
+
+    @media screen and (min-width:$desktop) {
+            flex-wrap: nowrap;
+    
+        }
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+
+    }
+
+
+    
+
 }
 
 .features__item {
-    width: 270px;
-    flex-direction: row;
+    width: 100%;
     margin-right: 30px;
-    &:last-child {
-            margin-right: 0;
-        }
+
+@media screen and (min-width: $tablet) {
+    width: 354px;
+    margin-right: 0;
+}
+
+@media screen and (min-width:$desktop) {
+    width: 270px;
+
+        // &:last-child {
+        //         margin-right: 0;
+        //     }
+}
+
 }
 
 
 
 .features__text {
+    @media screen and (max-width:767px)  {
+        margin-bottom: 30px;
+    }
     font-size: 14px;
     line-height: 1.7;
 }

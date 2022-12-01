@@ -41,9 +41,23 @@ img {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
@@ -491,16 +505,18 @@ img {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.features {
-  padding-bottom: 0;
-}
-
 .features__title {
+  text-align: center;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   color: var(--main-text-color);
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
 }
 
 .features__list-icon {
@@ -536,33 +552,62 @@ img {
       -ms-flex-align: center;
           align-items: center;
   height: 120px;
-  width: 270px;
+  width: 100%;
   background: #F5F4FA;
   border-radius: 4px;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .features__container-icon {
+    height: 120px;
+    width: 270px;
+  }
+}
 
 .features__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .features__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .features__item {
-  width: 270px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  width: 100%;
   margin-right: 30px;
 }
-.features__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: 354px;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: 270px;
+  }
 }
 
 .features__text {
   font-size: 14px;
   line-height: 1.7;
+}
+@media screen and (max-width: 767px) {
+  .features__text {
+    margin-bottom: 30px;
+  }
 }
 
 .teams {
