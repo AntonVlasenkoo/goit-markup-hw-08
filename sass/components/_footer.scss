@@ -7,10 +7,15 @@
 }
 
 .footer-container {
-    display: flex;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    align-items: baseline;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    @media screen and($desktop) {
+        display: flex;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        align-items: baseline;
+}
 }
 
 
