@@ -1,19 +1,30 @@
 .social-container {
-    margin-left: 70px;
+@media screen and(max-width:1199px) {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+    margin-bottom: 60px;
+    margin-top: 60px;
+    @media screen and (min-width:$desktop) {
+            margin-left: 70px;
+        
+    }
 
 }
 
 
 .social-title-icon {
+    text-align: left;
     margin-bottom: 20px;
     color: var(--white-color);
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: calc(14/16);
     letter-spacing: 0.03em;
+
 }
-
-
 
 
 .icon-container {

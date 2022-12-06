@@ -10,23 +10,55 @@
     display: block;
     align-items: center;
     justify-content: center;
-    @media screen and($desktop) {
+    @media screen and(min-width:$desktop) {
         display: flex;
         padding-top: 60px;
         padding-bottom: 60px;
         align-items: baseline;
 }
 }
+.wrapper{
+    @media screen and (min-width:$tablet ) and (max-width: $desktop){
+            display: flex;
+            justify-content: space-around;
+    }
+    @media screen and(min-width:$desktop) {
+        display: flex;
+        align-items: baseline;
+    }
+}
 
+.footer-elements{
+@media screen and(max-width:1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+}
 
 .footer-logo {
     margin-bottom: 20px;
-    display: inline-block;
+ 
     font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
+font-weight: 700;
+    font-size: 24px;
+    line-height: calc(24/28);
+    @media screen and(max-width:767px) {
+        text-align: center;
+    }
+    @media screen and(min-width:$desktop) {
+        font-weight: 700;
+            font-size: 26px;
+            line-height: calc(26/31);
+ 
+    }
 }
+
+
 
 .footer-first-part {
     color: var(--accent-color)
@@ -37,10 +69,17 @@
 }
 
 
+
+
 .footer-contacts-mailto {
     margin-bottom: 9px;
 }
-
+.footer-contacts-mailto,
+.footer-contacts-tel{
+    @media screen and(max-width:1199px) {
+        text-align: center;
+    }
+}
 
 .footer-contacts-list {
     margin-bottom: 0;
@@ -63,13 +102,21 @@
 
 
 .address {
-    width: 231px;
-    margin-right: 0px;
+    width: 232px;
+    margin-right: 0;
     margin-bottom: 9px;
     line-height: 1.71;
     color: #FFFFFF;
     font-style: normal;
+    @media screen and(max-width:1199px) {
+            text-align: center;
+    }
+    @media screen and(min-width:$desktop) {
+        margin-top: 20px;
+        
+    }
 }
+
 
 .footer-container {
     padding: 0;
