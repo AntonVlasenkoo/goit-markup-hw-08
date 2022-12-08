@@ -1,4 +1,6 @@
 .social-container {
+
+    
 @media screen and(max-width:1199px) {
     display: flex;
         flex-direction: column;
@@ -6,7 +8,7 @@
         align-items: center;
 }
     margin-bottom: 60px;
-    margin-top: 60px;
+
     @media screen and (min-width:$desktop) {
             margin-left: 70px;
         
